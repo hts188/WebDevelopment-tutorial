@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in HTML</title>
+</head>
+
+<body>
+    <h2>Forms in HTML</h2>
+    <form action="backend.php">
+        <div>
+            Name: <input type="text">
+        </div>
+        <!-- <div></div> tag is used to seprate them. Alternatively <br> tag can be used here -->
+        <!-- In above line we'll take name as input -->
+        <div>
+            Role: <input type="text">
+        </div>
+        <br>
+        <!-- We could also use <br> tag as I'm showing below -->
+        <label for="name"> Enter your Name</label>
+        <div>
+            Name: <input type="text" name="myName" id="name">
+        </div>
+        <br>
+        <div>
+            Role: <input type="text" name="myRole">
+        </div>
+        <!-- <br>tag isn't recommended as we'll be using CSS to style it later on -->
+
+        <!-- Taking Email as input -->
+        <div>
+            Email: <input type="email" name="MyEmail">
+        </div>
+        <br>
+        <!-- Taking Email as input -->
+        <div>
+            Date: <input type="date" name="MyDate">
+        </div>
+        <br>
+        <label for="age">Your Age </label>
+        <!-- <label for=""></label> tag is used to give label to a attribute. For instance we used Label for age which has id="age" and content inside label is displayed for age block   -->
+        <div>
+            Age: <input type="number" name="MyNumber" id="age">
+            <!-- For your information we can use e That is Exponential -->
+        </div>
+        <br>
+        <label for="cb">Are you 18+</label>
+        <div>
+            <input type="checkbox" name="MyConfirm" checked id="cb">
+            <!-- We can use Checked to keep a box checked by Default -->
+        </div>
+        <br>
+
+        <div>
+            Few Lines about yourself : <br> <textarea name="MyAbout" id="" cols="90" rows="10"></textarea>
+            <!-- Rows and Columns are used to sytle your text area -->
+        </div>
+        <br>
+
+        <div>
+            Gender: Male<input type="radio" name="MyGender"> Female<input type="radio" name="MyGender"> Other<input
+                type="radio" name="MyGender">
+        </div>
+        <br>
+        <!-- name attribute is the variable which will be used to Store Name Role and Email Date Number Confirmation Gender MyAbout respectively -->
+
+        <div>
+            <label for="car">Car you want</label>
+            <select name="MyCar" id="car">
+                <option value="indi">Indica</option>
+                <option value="swf">Swift</option>
+                <option value="mc">McLaren</option>
+                <option value="ad" selected>Audi</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <!-- Submitting the form  -->
+            <input type="submit" value="Submit the Form">
+            <input type="reset" value="Reset the form">
+            <!-- reset  tag is used to clear your form  -->
+            <!-- The text we want on submit button is written in value attribute -->
+        </div>
+    </form>
+    <!-- PHP isn't used here. It is just taken as reference. -->
+    <!-- action="backend.php" will save data in php -->
+</body>
+
+</html>
